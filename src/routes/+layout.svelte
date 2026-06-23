@@ -8,6 +8,7 @@
 		initAmbient,
 		Navbar,
 		MusicIndicator,
+		MetallicPaint,
 		site,
 		type NavbarItem
 	} from '$lib';
@@ -81,9 +82,27 @@
 </svelte:head>
 
 <div class="relative isolate min-h-dvh">
+	{#snippet logoSnippet()}
+		<div class="size-10 shrink-0 drop-shadow-xs/50 md:drop-shadow-sm/50" aria-hidden="true">
+			<MetallicPaint
+				imageSrc="/img/logo.svg"
+				tintColor="#f5f5f5"
+				lightColor="#ffffff"
+				darkColor="#080808"
+				chromaticSpread={0.8}
+				refraction={0.045}
+				brightness={2.2}
+				contrast={0.7}
+				liquid={0.75}
+				speed={0.2}
+				renderScale={3}
+			/>
+		</div>
+	{/snippet}
+
 	<Navbar
-		logo="/img/logo.svg"
-		logoAlt="Svelte"
+		{logoSnippet}
+		logoAlt={site.name}
 		items={navItems}
 		menuColor="var(--color-text)"
 		menuAriaLabel="Открыть меню"

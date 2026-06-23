@@ -39,3 +39,5 @@ export {
 export { default as ElasticSlider } from './components/ElasticSlider.svelte';
 export { default as MagicBento } from './components/MagicBento.svelte';
 export { default as ColorCard } from './components/ColorCard.svelte';
+export { default as GlassPanel } from './components/GlassPanel.svelte';
+export { default as MetallicPaint } from './components/MetallicPaint.svelte';

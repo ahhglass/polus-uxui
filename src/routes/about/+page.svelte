@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { pageTitle, site } from '$lib';
+	import { pageTitle, site, GlassPanel } from '$lib';
 </script>
 
 <svelte:head>
@@ -13,7 +13,7 @@
 	>
 		{site.name}
 	</h1>
-	<article class="mx-auto w-full max-w-5xl">
+	<GlassPanel class="mx-auto w-full max-w-5xl p-4 md:p-8">
 		<p
 			class=" text-base leading-relaxed text-[var(--color-canvas)] md:text-2xl mix-blend-luminosity"
 		>
@@ -34,5 +34,5 @@
 		>
 			Это фан-сайт, не имеет отношения к реальной компании.
 		</p>
-	</article>
+	</GlassPanel>
 </div>

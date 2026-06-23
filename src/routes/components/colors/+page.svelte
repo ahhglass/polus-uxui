@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ColorCard, pageTitle } from '$lib';
+	import { ColorCard, GlassPanel, pageTitle } from '$lib';
 
 	const colors = [
 		{ name: 'Black', value: '#000000' },
@@ -49,11 +49,15 @@
 		Страница компонентов цветов? Ну и ну.
 	</p>
 
-	<div
-		class="mx-auto mt-8 grid w-full max-w-[68rem] grid-cols-1 gap-4 px-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4 backdrop-blur-xl p-4 rounded-4xl shadow-md"
+	<GlassPanel
+		class="mx-auto mt-8 w-full max-w-[68rem] rounded-4xl"
+		contentClass="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4"
+		overlay="rgba(255, 255, 255, 0.1)"
+		highlight="rgba(255, 255, 255, 0.45)"
+		blur="6px"
 	>
 		{#each colors as color (color.name)}
 			<ColorCard name={color.name} value={color.value} />
 		{/each}
-	</div>
+	</GlassPanel>
 </div>
