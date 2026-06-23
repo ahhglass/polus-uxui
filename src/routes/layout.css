@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+:root {
+	/* Colors */
+	--color-canvas: #f9f9f9;
+	--color-text: #252122;
+	--color-black: #070d0d;
+	--color-white: #f9f9f9;
+	--color-stone: #c4d0ce;
+
+	/* Accent palette (Magic Bento, buttons, sparkles) */
+	--color-graphite: #1a1a1a;
+	--color-aspidin: #2d4a52;
+	--color-marengo: #4d6569;
+
+	/* Animations */
+	--ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+	--duration-fast: 200ms;
+	--duration-normal: 400ms;
+
+	/* Fonts */
+	--font-sans: 'Open Sans', sans-serif;
+}
+
+/* Global styles */
+* {
+	line-height: 1.35;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+/* Document */
+html {
+	scrollbar-gutter: stable;
+	scrollbar-width: none;
+}
+
+body {
+	background-color: var(--color-canvas);
+	color: var(--color-text);
+	font-family: var(--font-sans);
+	scrollbar-width: none;
+}
+
+/* UI animations */
+.ui-ease-transition {
+	transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+/* Full-screen hero pages (home, components, patterns placeholders) */
+.page-shell {
+	position: relative;
+	display: flex;
+	min-height: 100dvh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 6rem 1rem 2rem;
+	text-align: center;
+}
+
+@media (min-width: 640px) {
+	.page-shell {
+		gap: 1.25rem;
+		padding: 4rem 1.5rem 2rem;
+	}
+}
