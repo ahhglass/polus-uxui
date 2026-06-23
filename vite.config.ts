@@ -19,6 +19,9 @@ export default defineConfig({
 			adapter: adapter()
 		})
 	],
+	ssr: {
+		noExternal: ['gsap', 'ogl', 'three', 'motion']
+	},
 	server: {
 		// Windows: MP3 в static часто locked (браузер, AV, копирование) → EBUSY роняет dev-сервер
 		watch: {
