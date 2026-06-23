@@ -2,7 +2,15 @@
 	import './layout.css';
 	import { onMount } from 'svelte';
 	import favicon from '$lib/assets/favicon.svg';
-	import { Grainient, initSound, initAmbient, Navbar, MusicIndicator, site, type NavbarItem } from '$lib';
+	import {
+		Grainient,
+		initSound,
+		initAmbient,
+		Navbar,
+		MusicIndicator,
+		site,
+		type NavbarItem
+	} from '$lib';
 
 	let { children } = $props();
 
@@ -21,6 +29,7 @@
 			bgColor: '#1a1a1a',
 			textColor: '#fff',
 			links: [
+				{ label: 'Цвета', href: '/components/colors', ariaLabel: 'Перейти к цветам' },
 				{ label: 'Кнопки', href: '/components/buttons', ariaLabel: 'Перейти к кнопкам' },
 				{ label: 'Карточки', href: '/components/cards', ariaLabel: 'Перейти к карточкам' },
 				{ label: 'Формы', href: '/components/forms', ariaLabel: 'Перейти к формам' }
@@ -68,9 +77,9 @@
 		buttonTextColor="var(--color-canvas)"
 		buttonBgColor="var(--color-text)"
 		ctaHref="/components/buttons"
-		widthDefault="56rem"
+		widthDefault="64rem"
 		widthCompact="28rem"
-		widthExpanded="min(60rem, calc(100vw - 2.5rem))"
+		widthExpanded="min(68rem, calc(100vw - 2.5rem))"
 	/>
 	<Grainient
 		class="pointer-events-none fixed inset-0"

@@ -38,3 +38,4 @@ export {
 } from './components/DistortionSlider.svelte';
 export { default as ElasticSlider } from './components/ElasticSlider.svelte';
 export { default as MagicBento } from './components/MagicBento.svelte';
+export { default as ColorCard } from './components/ColorCard.svelte';

@@ -1,11 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
-	import { Button, MagicBento, pageTitle } from '$lib';
-
-	function goHome() {
-		goto(resolve('/'));
-	}
+	import { MagicBento, pageTitle } from '$lib';
 </script>
 
 <svelte:head>
@@ -20,7 +14,7 @@
 		Страница компонентов карточек.
 	</p>
 
-	<div class="mt-8 w-full max-w-[64em] px-3">
+	<div class="mt-8 w-full max-w-[68em] px-3">
 		<MagicBento />
 	</div>
 </div>
