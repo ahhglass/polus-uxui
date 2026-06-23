@@ -1,5 +1,5 @@
 <script module lang="ts">
-	export type NavbarLink = { label: string; href: string; ariaLabel: string };
+	export type NavbarLink = { label: string; href: string; ariaLabel: string; badge?: string };
 	export type NavbarItem = {
 		label: string;
 		bgColor: string;
@@ -156,7 +156,12 @@
 			onclick={handleLinkClick}
 		>
 			{@render linkIcon()}
-			<span class="site-nav__link-label">{lnk.label}</span>
+			<span class="site-nav__link-text">
+				<span class="site-nav__link-label">{lnk.label}</span>
+				{#if lnk.badge}
+					<span class="site-nav__link-badge">{lnk.badge}</span>
+				{/if}
+			</span>
 		</a>
 	{:else}
 		<a
@@ -166,7 +171,12 @@
 			onclick={handleLinkClick}
 		>
 			{@render linkIcon()}
-			<span class="site-nav__link-label">{lnk.label}</span>
+			<span class="site-nav__link-text">
+				<span class="site-nav__link-label">{lnk.label}</span>
+				{#if lnk.badge}
+					<span class="site-nav__link-badge">{lnk.badge}</span>
+				{/if}
+			</span>
 		</a>
 	{/if}
 {/snippet}
@@ -447,6 +457,24 @@
 
 	.site-nav__link-label {
 		transition: transform var(--duration-normal) var(--ease-smooth);
+	}
+
+	.site-nav__link-text {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+	}
+
+	.site-nav__link-badge {
+		flex-shrink: 0;
+		border-radius: 0.25rem;
+		background: color-mix(in srgb, currentColor 20%, transparent);
+		padding: 0.18rem;
+		font-size: 0.6rem;
+		font-weight: 700;
+		line-height: 1.1;
+		letter-spacing: 0.08em;
+		color: currentColor;
 	}
 
 	:global(body.nav-open) {

@@ -29,9 +29,19 @@
 			bgColor: '#1a1a1a',
 			textColor: '#fff',
 			links: [
-				{ label: 'Цвета', href: '/components/colors', ariaLabel: 'Перейти к цветам' },
+				{
+					label: 'Цвета',
+					href: '/components/colors',
+					ariaLabel: 'Перейти к цветам',
+					badge: 'NEW'
+				},
 				{ label: 'Кнопки', href: '/components/buttons', ariaLabel: 'Перейти к кнопкам' },
-				{ label: 'Карточки', href: '/components/cards', ariaLabel: 'Перейти к карточкам' },
+				{
+					label: 'Карточки',
+					href: '/components/cards',
+					ariaLabel: 'Перейти к карточкам',
+					badge: 'NEW'
+				},
 				{ label: 'Формы', href: '/components/forms', ariaLabel: 'Перейти к формам' }
 			]
 		},
@@ -40,8 +50,13 @@
 			bgColor: '#2d4a52',
 			textColor: '#fff',
 			links: [
-				{ label: 'Галерея', href: '/patterns/gallery', ariaLabel: 'Галерея' },
-				{ label: '3D Слайдер', href: '/patterns/slider', ariaLabel: '3D слайдер с деформацией' },
+				{ label: 'Галерея', href: '/patterns/gallery', ariaLabel: 'Галерея', badge: 'NEW' },
+				{
+					label: '3D Слайдер',
+					href: '/patterns/slider',
+					ariaLabel: '3D слайдер с деформацией',
+					badge: 'NEW'
+				},
 				{ label: 'Модалки', href: '/patterns/modals', ariaLabel: 'Паттерны модальных окон' },
 				{ label: 'Анимации', href: '/patterns/animations', ariaLabel: 'Паттерны анимаций' }
 			]
