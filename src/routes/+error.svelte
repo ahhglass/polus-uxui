@@ -15,20 +15,20 @@
 
 <div class="flex h-dvh flex-col items-center justify-center gap-8 px-6 text-center">
 	<div>
-		<p class="text-sm font-semibold tracking-[0.3em] uppercase mix-blend-difference text-white">
+		<p class="text-sm font-semibold tracking-[0.3em] uppercase mix-blend-luminosity text-white">
 			Ошибка {page.status}
 		</p>
 
-		<h1 class="mt-4 text-9xl font-extrabold tracking-tight mix-blend-difference text-white">
+		<h1 class="mt-4 text-9xl font-extrabold tracking-tight mix-blend-luminosity text-white">
 			{page.status}
 		</h1>
 
-		<p class="mt-2 max-w-md text-2xl mix-blend-difference text-white">
+		<p class="mt-2 max-w-md text-2xl mix-blend-luminosity text-white">
 			Куда-то не туда мы свернули...
 		</p>
 	</div>
 
-	<div class="mix-blend-overlay">
+	<div class="mix-blend-luminosity">
 		<Button radius="full" size="lg" color="#ffffff" textColor="#070D0D" onclick={goHome}>
 			Назад на главную
 		</Button>

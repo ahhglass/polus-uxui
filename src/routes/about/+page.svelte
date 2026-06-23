@@ -7,9 +7,9 @@
 	<meta name="description" content={site.description} />
 </svelte:head>
 
-<div class="page-shell px-4">
+<div class="page-shell">
 	<h1
-		class="text-5xl font-bold tracking-tight text-[var(--color-canvas)] mix-blend-luminosity md:text-9xl"
+		class="text-6xl font-extrabold tracking-wide text-[var(--color-canvas)] uppercase mix-blend-luminosity md:text-9xl"
 	>
 		{site.name}
 	</h1>
@@ -30,7 +30,7 @@
 		</p>
 
 		<p
-			class="mt-4 text-xs leading-relaxed text-[var(--color-canvas)] md:text-lg mix-blend-luminosity"
+			class="mt-4 text-sm leading-relaxed text-[var(--color-canvas)] md:text-lg mix-blend-luminosity"
 		>
 			Это фан-сайт, не имеет отношения к реальной компании.
 		</p>

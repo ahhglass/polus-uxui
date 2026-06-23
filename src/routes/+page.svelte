@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="page-shell">
-	<h1 class="text-5xl font-bold mix-blend-luminosity text-[var(--color-canvas)] md:text-9xl">
+	<h1 class="text-6xl font-bold mix-blend-luminosity text-[var(--color-canvas)] md:text-9xl">
 		Привет?
 	</h1>
 	<p class="max-w-xl text-lg mix-blend-luminosity text-[var(--color-canvas)] md:text-2xl">
@@ -15,7 +15,7 @@
 	</p>
 
 	<p
-		class="absolute bottom-10 max-w-md text-xs mix-blend-luminosity text-[var(--color-canvas)] md:text-base mx-4"
+		class="absolute bottom-10 max-w-md text-sm mix-blend-luminosity text-[var(--color-canvas)] md:text-base mx-4"
 	>
 		Так-то мы студия дизайна, но пока ничего не сделали
 	</p>
