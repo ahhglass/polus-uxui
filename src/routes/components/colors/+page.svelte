@@ -42,10 +42,10 @@
 </svelte:head>
 
 <div class="page-shell justify-start pt-28 pb-16">
-	<h1 class="text-5xl font-bold mix-blend-difference text-[var(--color-canvas)] md:text-9xl">
+	<h1 class="text-5xl font-bold mix-blend-luminosity text-[var(--color-canvas)] md:text-9xl">
 		Цвета
 	</h1>
-	<p class="max-w-xl text-lg mix-blend-difference text-[var(--color-canvas)] md:text-2xl">
+	<p class="max-w-xl text-lg mix-blend-luminosity text-[var(--color-canvas)] md:text-2xl">
 		Страница компонентов цветов? Ну и ну.
 	</p>
 

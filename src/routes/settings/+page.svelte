@@ -63,19 +63,19 @@
 <div class="min-h-dvh px-4 pb-16 pt-24 md:px-6 md:pt-28">
 	<header class="mx-auto max-w-3xl text-center">
 		<h1
-			class="text-5xl font-bold tracking-tight text-[var(--color-canvas)] mix-blend-difference md:text-9xl"
+			class="text-5xl font-bold tracking-tight text-[var(--color-canvas)] mix-blend-luminosity md:text-9xl"
 		>
 			Настройки
 		</h1>
 		<p
-			class="mx-auto mt-5 max-w-xl text-lg text-[var(--color-canvas)] mix-blend-difference md:text-2xl"
+			class="mx-auto mt-5 max-w-xl text-lg text-[var(--color-canvas)] mix-blend-luminosity md:text-2xl"
 		>
 			Звук, громкость и параметры интерфейса — всё в одном месте.
 		</p>
 	</header>
 
 	<article
-		class="mx-auto mt-12 max-w-5xl rounded-2xl border border-white/25 bg-[var(--color-canvas)]/92 p-6 backdrop-blur-md md:p-10"
+		class="mx-auto mt-12 max-w-5xl rounded-2xl border border-white/15 bg-[var(--color-canvas)]/92 p-6 backdrop-blur-md md:p-10"
 	>
 		<section aria-labelledby="audio-heading">
 			<div class="flex items-baseline justify-between gap-4">

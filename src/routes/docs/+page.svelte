@@ -27,27 +27,21 @@
 
 <div class="page-shell px-4">
 	<h1
-		class="text-4xl font-bold tracking-tight text-[var(--color-canvas)] mix-blend-difference md:text-9xl"
+		class="text-4xl font-bold tracking-tight text-[var(--color-canvas)] mix-blend-luminosity md:text-9xl"
 	>
 		Документация
 	</h1>
 
 	<article class="mx-auto w-full max-w-5xl text-center">
-		<p
-			class="text-base leading-relaxed text-[var(--color-canvas)] mix-blend-difference md:text-2xl"
-		>
-			Краткий справочник по площадке: куда заходить, что смотреть и как устроены базовые вещи.
-		</p>
-
 		{#each sections as section (section.title)}
-			<section class="mt-8">
+			<section class="mt-6">
 				<h2
-					class="text-lg font-semibold tracking-tight text-[var(--color-canvas)] mix-blend-difference md:text-xl"
+					class="text-lg font-semibold tracking-tight text-[var(--color-canvas)] mix-blend-luminosity md:text-xl"
 				>
 					{section.title}
 				</h2>
 				<p
-					class="mt-2 text-base leading-relaxed text-[var(--color-canvas)] mix-blend-difference md:text-2xl"
+					class="mt-2 text-base leading-relaxed text-[var(--color-canvas)] mix-blend-luminosity md:text-2xl"
 				>
 					{section.body}
 				</p>

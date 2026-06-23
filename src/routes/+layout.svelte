@@ -83,9 +83,9 @@
 	/>
 	<Grainient
 		class="pointer-events-none fixed inset-0"
-		color1="#C4D0CE"
+		color1="#9DA5A3"
 		color2="#4D6569"
-		color3="#070D0D"
+		color3="#193333"
 		warpStrength={1}
 		warpSpeed={2}
 		contrast={1.5}

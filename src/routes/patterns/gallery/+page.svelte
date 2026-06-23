@@ -11,7 +11,7 @@
 		fit={0.5}
 		dragDampening={2}
 		minRadius={900}
-		segments={40}
+		segments={32}
 		grayscale={false}
 		imageBorderRadius="16px"
 		openModalView={true}

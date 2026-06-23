@@ -553,7 +553,7 @@
 		display: flex;
 		color: var(--color-canvas);
 		pointer-events: none;
-		mix-blend-mode: difference;
+		mix-blend-mode: luminosity;
 	}
 
 	/* vertical: название слева, счётчик справа */
