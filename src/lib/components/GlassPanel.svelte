@@ -26,7 +26,7 @@
 		contentClass = '',
 		overlay = 'rgba(255, 255, 255, 0.08)',
 		highlight = 'rgba(255, 255, 255, 0.15)',
-		blur = '2px',
+		blur = '4px',
 		lens = true
 	}: Props = $props();
 
