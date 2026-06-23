@@ -389,6 +389,15 @@
 		syncCursor();
 	}
 
+	function onMainClick(e: MouseEvent) {
+		if (modalImage) return;
+		if (!focusedEl) return;
+		if (performance.now() - openStartedAt < OPEN_GUARD_MS) return;
+		const target = e.target as Element;
+		if (target.closest('.enlarge')) return;
+		closeOverlay();
+	}
+
 	function handleTileOpen(el: HTMLElement) {
 		if (openModalView) openModalFromElement(el);
 		else openItemFromElement(el);
@@ -673,6 +682,7 @@
 		onpointercancel={onPointerUp}
 		onpointerenter={onMainPointerEnter}
 		onpointerleave={onMainPointerLeave}
+		onclick={onMainClick}
 		role="presentation"
 	>
 		<div class="stage">
@@ -758,8 +768,6 @@
 				/>
 			</svg>
 		</button>
-		<!-- svelte-ignore a11y_click_events_have_key_events -->
-		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div class="dg-modal__content" onclick={(e) => e.stopPropagation()}>
 			<img
 				src={modalImage.src}
@@ -907,9 +915,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
-		height: 100%;
-		max-width: 100%;
+		max-width: min(100%, 96vw);
 		gap: 1rem;
 	}
 

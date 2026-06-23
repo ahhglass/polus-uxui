@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import { goto } from '$app/navigation';
@@ -73,13 +73,21 @@
 	let menuOpen = $state(false);
 	let scrolled = $state(false);
 	let scrollSynced = $state(false);
+	let menuButton = $state<HTMLDivElement | null>(null);
 
 	const visibleItems = $derived((items ?? []).slice(0, maxItems));
 	const menuAria = $derived(menuOpen ? closeMenuAriaLabel : menuAriaLabel);
 	const motionEnabled = $derived(!prefersReducedMotion.current);
 
-	function closeMenu() {
+	async function closeMenu() {
 		if (!menuOpen) return;
+
+		const active = document.activeElement;
+		if (active instanceof HTMLElement && active.closest('#site-nav-panel')) {
+			menuButton?.focus();
+			await tick();
+		}
+
 		menuOpen = false;
 		sfx.unlock();
 		sfx.play('closeMenu');
@@ -105,7 +113,7 @@
 	}
 
 	function handleLinkClick() {
-		closeMenu();
+		void closeMenu();
 	}
 
 	function syncScroll() {
@@ -237,6 +245,7 @@
 				<div class="site-nav__top relative z-[2] px-4">
 					<div class="site-nav__top-bar">
 						<div
+							bind:this={menuButton}
 							class="site-nav__menu group flex min-h-12 min-w-12 shrink-0 cursor-pointer flex-col items-center justify-center gap-[6px] rounded-lg"
 							role="button"
 							aria-label={menuAria}
@@ -290,7 +299,7 @@
 					<div class="site-nav__panel">
 						<div
 							class="site-nav__panel-inner flex flex-col gap-2 p-2 md:flex-row md:items-stretch md:gap-3 md:p-3"
-							aria-hidden={!menuOpen}
+							inert={!menuOpen}
 						>
 							{#each visibleItems as item (item.label)}
 								<div
@@ -343,6 +352,10 @@
 
 	.site-nav__actions {
 		min-width: 3rem;
+	}
+
+	.site-nav__menu {
+		margin-left: -0.625rem;
 	}
 
 	.site-nav__width {
@@ -508,6 +521,12 @@
 	@media (max-width: 768px) {
 		.site-nav {
 			--nav-offset-y: 0.75rem;
+		}
+
+		.site-nav__brand {
+			left: auto;
+			right: calc(0.75rem + 1rem);
+			transform: translate3d(0, -50%, 0);
 		}
 
 		.site-nav__width,
