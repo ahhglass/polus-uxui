@@ -305,7 +305,7 @@
 
 <style>
 	.site-nav {
-		--nav-offset-y: 1.25rem;
+		--nav-offset-y: 1.35rem;
 		--nav-logo-top: calc(var(--nav-offset-y) + var(--nav-top-height) / 2);
 	}
 

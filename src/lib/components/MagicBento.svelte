@@ -464,7 +464,6 @@
 		position: relative;
 		user-select: none;
 		font-family: 'Open Sans', sans-serif;
-		--bento-border: color-mix(in srgb, var(--color-black) 14%, var(--color-stone));
 	}
 	:global(.bento-section .card-grid) {
 		display: grid;
